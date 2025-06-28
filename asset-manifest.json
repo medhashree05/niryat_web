@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/niryat_web/static/css/main.d7c01057.css",
+    "main.js": "/niryat_web/static/js/main.6127d942.js",
+    "static/media/map.png": "/niryat_web/static/media/map.b1f861943d9a9aed6b18.png",
+    "static/media/business.png": "/niryat_web/static/media/business.d9b5fb73cc27f4fdc6d2.png",
+    "static/media/fulfill.png": "/niryat_web/static/media/fulfill.c5e8bacba175f669d56c.png",
+    "static/media/scroll_3.png": "/niryat_web/static/media/scroll_3.4d91ca163c371af81a7d.png",
+    "static/media/pay.png": "/niryat_web/static/media/pay.2130566f93f43b9e669f.png",
+    "static/media/identify.png": "/niryat_web/static/media/identify.76afbe797cf39cc52c4d.png",
+    "static/media/card_2.png": "/niryat_web/static/media/card_2.c8c781d9777383862690.png",
+    "static/media/card_1.png": "/niryat_web/static/media/card_1.c06ea886143e39943a8d.png",
+    "static/media/scroll_1.png": "/niryat_web/static/media/scroll_1.8afe87fe5bb726d7cfb0.png",
+    "static/media/manage.png": "/niryat_web/static/media/manage.4ed60b773510d2be4280.png",
+    "static/media/card_3.png": "/niryat_web/static/media/card_3.dda6b6d0079d5212c34a.png",
+    "static/media/search.png": "/niryat_web/static/media/search.3d175ce44643eb2ad0fd.png",
+    "static/media/AI.png": "/niryat_web/static/media/AI.ffb0efa8d4dd3601c948.png",
+    "static/media/box.png": "/niryat_web/static/media/box.7ab97d2eceef73a6df1a.png",
+    "static/media/d1.webp": "/niryat_web/static/media/d1.653fe1264e4c3dbcc2da.webp",
+    "static/media/scroll_2.png": "/niryat_web/static/media/scroll_2.0152dd873755acf258e6.png",
+    "static/media/excavator.png": "/niryat_web/static/media/excavator.be7f16a54955f23d0f7a.png",
+    "static/media/helper.jpg": "/niryat_web/static/media/helper.a056da12a9a3c30a3fd0.jpg",
+    "static/media/block_6.jpg": "/niryat_web/static/media/block_6.3836ed30ccc4535df052.jpg",
+    "static/media/background_1.avif": "/niryat_web/static/media/background_1.fcf7e5d30d193455ac9c.avif",
+    "static/media/copper.png": "/niryat_web/static/media/copper.cfe2d9768f5510af4412.png",
+    "static/media/wheel.png": "/niryat_web/static/media/wheel.6ad50d525c1baf4954fc.png",
+    "static/media/founder.png": "/niryat_web/static/media/founder.835bdb358b503f59a98c.png",
+    "static/media/knife.png": "/niryat_web/static/media/knife.f22b219011ec35a189d7.png",
+    "static/media/extension.png": "/niryat_web/static/media/extension.ce6af768d273b09646aa.png",
+    "static/media/table.png": "/niryat_web/static/media/table.659c0f454d304854c376.png",
+    "static/media/d9.jpeg": "/niryat_web/static/media/d9.561247283c509bc46a60.jpeg",
+    "static/media/d13.jpeg": "/niryat_web/static/media/d13.2712c5717082222ac97f.jpeg",
+    "index.html": "/niryat_web/index.html",
+    "main.d7c01057.css.map": "/niryat_web/static/css/main.d7c01057.css.map",
+    "main.6127d942.js.map": "/niryat_web/static/js/main.6127d942.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7c01057.css",
+    "static/js/main.6127d942.js"
+  ]
+}
