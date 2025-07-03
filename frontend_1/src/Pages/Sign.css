@@ -7,6 +7,22 @@
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
   font-family: Arial, sans-serif;
 }
+.error {
+  border: 1px solid #ff6b6b;
+  background-color: #ffe0e0;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.sign:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 .auth-container h2 {
   text-align: center;

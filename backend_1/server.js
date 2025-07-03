@@ -1,22 +1,25 @@
-const express = require('express');
-const app = express();
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const cors = require('cors');
-
+// server.js
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import userRoutes from './routes/userRoutes.js';
+import enquiryRoutes from './routes/enquiryRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
+import addressRoutes from './routes/addressRoutes.js';
+import productsRoutes from './routes/productRoutes.js';
 dotenv.config();
-app.use(cors());
+
+const app = express();
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+}));
 app.use(express.json());
+app.use('/api/enquiries', enquiryRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/orders',orderRoutes);
+app.use('/api/addresses', addressRoutes);
+app.use('/api/products', productsRoutes);
 
-// Routes
-app.use('/auth', require('./routes/auth'));
-app.use('/products', require('./routes/product'));
-app.use('/enquiries', require('./routes/enquiry'));
-app.use('/admin', require('./routes/admin'));
-
-// DB Connection
-mongoose.connect(process.env.MONGO_URI, () =>
-  console.log('MongoDB connected')
-);
-
-app.listen(5000, () => console.log('Server running on port 5000'));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

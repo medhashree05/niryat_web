@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import './Home.css';
+import { Link } from "react-router-dom";
 import cpuImg from '../assets/scroll_1.png';
 import keyboardImg from '../assets/scroll_2.png';
 import mouseImg from '../assets/scroll_3.png';
@@ -41,7 +42,7 @@ import bg2 from '../assets/card_1.png';
 import bg3 from '../assets/card_2.png';
 import bg4 from '../assets/card_3.png';
 import bg5 from '../assets/block_6.jpg';
-
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const divStyle = {
@@ -99,6 +100,14 @@ const scrollToSection = (id) => {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 };
+ const [query, setQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    // Navigate to products page with query param (even empty is okay)
+    navigate(`/products?search=${encodeURIComponent(query.trim())}`);
+  };
+
 
 
   return (
@@ -110,10 +119,17 @@ const scrollToSection = (id) => {
       </div>
       
       <div className="search">
-        <input type="text" className="bar" placeholder="home use beauty equipment" />
-        <div className="cam">📷</div>
-        <div className="search_logo">🔍 Search</div>
-      </div>
+      <input
+        type="text"
+        className="bar"
+        placeholder="home use beauty equipment"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      <div className="cam">📷</div>
+      <button onClick={handleSearch} className="search_logo">🔍 search</button>
+    </div>
+  
 
       <div className="frequent">
         Frequently searched:

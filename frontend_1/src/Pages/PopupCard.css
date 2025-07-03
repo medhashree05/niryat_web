@@ -1,0 +1,349 @@
+/* PopupCard.css */
+
+/* Overlay that covers the entire screen */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Main popup card container */
+.popup-card {
+  background: #461901; /* Orange background */
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(234, 88, 12, 0.6);
+  max-width: 400px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+  position: relative;
+  color: white; /* White text */
+}
+
+/* Popup header section */
+.popup-header {
+  padding: 20px 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255 255 255 / 0.3);
+}
+
+/* Header variants for different types */
+.popup-header-success {
+  background: linear-gradient(135deg, #002d11 0%, #01501e 100%);
+  border-bottom-color: rgba(22, 163, 74, 0.6);
+}
+
+.popup-header-error {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  border-bottom-color: rgba(185, 28, 28, 0.6);
+}
+
+.popup-header-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-bottom-color: rgba(217, 119, 6, 0.6);
+}
+
+.popup-header-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  border-bottom-color: rgba(37, 99, 235, 0.6);
+}
+
+/* Icon styling */
+.popup-icon {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+  color: white;
+}
+
+/* Title styling */
+.popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Body section */
+.popup-body {
+  padding: 20px 24px;
+}
+
+/* Message text */
+.popup-message {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Footer section */
+.popup-footer {
+  padding: 16px 24px 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255 255 255 / 0.3);
+  background: rgba(84, 51, 1, 0.1);
+}
+
+/* Button base styles */
+.popup-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #461901; /* medium orange */
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.6);
+}
+
+.popup-btn:hover {
+  background: #c2410c; /* darker orange */
+  box-shadow: 0 4px 12px rgba(194, 65, 12, 0.8);
+  transform: translateY(-1px);
+}
+
+.popup-btn:active {
+  background: #9a3412; /* even darker */
+  transform: translateY(0);
+}
+
+.popup-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.8);
+}
+
+/* Secondary button (Cancel) */
+.popup-btn-secondary {
+  background: rgba(255 255 255 / 0.15);
+  color: white;
+  border: 1px solid rgba(255 255 255 / 0.4);
+  box-shadow: none;
+}
+
+.popup-btn-secondary:hover {
+  background: rgba(255 255 255 / 0.3);
+  color: white;
+  box-shadow: 0 0 8px rgba(255 255 255, 0.4);
+}
+
+/* Success button */
+.popup-btn-success {
+  background: linear-gradient(135deg, #01461a 0%, #016526 100%);
+  color: white;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.6);
+}
+
+.popup-btn-success:hover {
+  background: linear-gradient(135deg, #012c10 0%, #15803d 100%);
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.8);
+}
+
+/* Error button */
+.popup-btn-error {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+  box-shadow: 0 2px 6px rgba(185, 28, 28, 0.6);
+}
+
+.popup-btn-error:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  box-shadow: 0 4px 12px rgba(127, 29, 29, 0.8);
+}
+
+/* Warning button */
+.popup-btn-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.6);
+}
+
+.popup-btn-warning:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  box-shadow: 0 4px 12px rgba(180, 83, 9, 0.8);
+}
+
+/* Info button */
+.popup-btn-info {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.6);
+}
+
+.popup-btn-info:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .popup-card {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .popup-header {
+    padding: 16px 20px 12px;
+  }
+  
+  .popup-body {
+    padding: 16px 20px;
+  }
+  
+  .popup-footer {
+    padding: 12px 20px 16px;
+    flex-direction: column;
+  }
+  
+  .popup-btn {
+    width: 100%;
+  }
+  
+  .popup-title {
+    font-size: 16px;
+  }
+  
+  .popup-message {
+    font-size: 13px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .popup-card {
+    background: #c2410c; /* Darker orange for dark mode */
+    color: white;
+  }
+  
+  .popup-header {
+    border-bottom-color: rgba(255 255 255 / 0.3);
+  }
+  
+  .popup-title {
+    color: white;
+  }
+  
+  .popup-message {
+    color: rgba(255 255 255 / 0.85);
+  }
+  
+  .popup-footer {
+    background: rgba(255 255 255 / 0.1);
+    border-top-color: rgba(255 255 255 / 0.3);
+  }
+  
+  .popup-btn-secondary {
+    background: rgba(255 255 255 / 0.15);
+    color: white;
+    border-color: rgba(255 255 255 / 0.4);
+  }
+  
+  .popup-btn-secondary:hover {
+    background: rgba(255 255 255 / 0.3);
+    color: white;
+  }
+}
+
+/* Accessibility improvements */
+.popup-card:focus-within {
+  outline: 2px solid rgba(234, 88, 12, 0.8);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all elements */
+.popup-card * {
+  transition: all 0.2s ease;
+}
+
+/* Loading state for buttons */
+.popup-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.popup-btn.loading::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .popup-card {
+    border: 2px solid #000;
+  }
+  
+  .popup-btn {
+    border: 2px solid;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .popup-overlay,
+  .popup-card,
+  .popup-btn,
+  .popup-card * {
+    animation: none;
+    transition: none;
+  }
+  
+  .popup-btn:hover {
+    transform: none;
+  }
+}

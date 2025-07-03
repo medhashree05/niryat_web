@@ -1,0 +1,243 @@
+/* UserDashboard.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.userdash-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#eabe66 0%, #c46b12 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Card container */
+.userdash-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.userdash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Title styles */
+.userdash-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg,#eabe66, #c46b12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Links container */
+.userdash-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.userdash-links li {
+  transition: transform 0.2s ease;
+  opacity: 0;
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.userdash-links li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.userdash-links li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.userdash-links li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.userdash-links li:hover {
+  transform: translateX(5px);
+}
+
+/* Link styles */
+.userdash-link {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  text-decoration: none;
+  color: #4a5568;
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.userdash-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.userdash-link:hover::before {
+  left: 100%;
+}
+
+.userdash-link:hover {
+  color: #c46b12;
+  background: linear-gradient(135deg, #edf2f7, #e2e8f0);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  border-color: #eabe66;
+}
+
+.userdash-link:active {
+  transform: translateY(0);
+}
+
+/* Emoji and text styling */
+.link-emoji {
+  font-size: 1.3em;
+  margin-right: 12px;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.userdash-link:hover .link-emoji {
+  filter: grayscale(0%);
+}
+
+.link-text {
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .userdash-card {
+    padding: 35px 25px;
+    margin: 15px;
+  }
+  
+  .userdash-title {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+  
+  .userdash-link {
+    padding: 16px 20px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .userdash-container {
+    padding: 15px;
+  }
+  
+  .userdash-card {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .userdash-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .userdash-link {
+    padding: 15px 18px;
+    font-size: 1rem;
+  }
+  
+  .link-emoji {
+    font-size: 1.2em;
+    margin-right: 10px;
+  }
+}
+
+/* Focus states for accessibility */
+.userdash-link:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .userdash-container {
+    background: white;
+    min-height: auto;
+  }
+  
+  .userdash-card {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .userdash-link {
+    background: white;
+    border: 1px solid #ccc;
+  }
+}
+/* Add this to your UserDashboard.css file */
+.userdash-link {
+  transition: transform 0.15s ease;
+}
+
+.userdash-link:active {
+  transform: scale(0.95);
+}
+
+/* Remove the handleLinkClick function entirely from your React component */
